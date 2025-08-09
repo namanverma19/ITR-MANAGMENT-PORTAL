@@ -1,0 +1,12 @@
+# Protect uploads directory
+Options -Indexes
+<Files "*.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Allow only specific file types
+<Files ~ "\.(pdf|doc|docx)$">
+    Order allow,deny
+    Allow from all
+</Files>
